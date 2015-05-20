@@ -23,8 +23,8 @@ class Auth_service {
 	public function __construct()
 	{
 		$this->CI =& get_instance();
-		$this->all_path[0] = new path("ranks", false, array('GET'));
-		$this->all_path[1] = new path("ranks/index", false, array('GET'));
+		$this->all_path[0] = new path("/^api\/ranks/i", false, array('GET'));
+		$this->all_path[1] = new path("/^api\/ranks\/\d+/i", false, array('GET'));
 	}
 
 	public function authorization() 
@@ -40,7 +40,7 @@ class Auth_service {
 		{
 			$tmp = $all_path[$i];
 			// Find curent path
-			if ($req_path === $tmp->path) 
+			if (preg_match($tmp->path, $req_path)) 
 			{
 				$tmp_finded = false;
 				// Find allowed method
