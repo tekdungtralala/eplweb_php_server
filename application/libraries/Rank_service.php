@@ -29,7 +29,7 @@ class Rank_service {
 			{
 				if ($t["id"] === $r["team_id"])
 				{
-					$r["team"] = change_key($t, get_team_keys());;
+					$r["team"] = change_key($t, get_team_keys());
 				}
 			}
 			

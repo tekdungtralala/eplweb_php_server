@@ -88,7 +88,7 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url_helper');
+$autoload['helper'] = array('url_helper', 'eplweb_common_helper');
 
 
 /*

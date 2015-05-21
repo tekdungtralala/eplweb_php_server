@@ -10,7 +10,7 @@ class Ranks extends CI_Controller {
 		$this->load->library('rank_service');
 		
 		$result = $this->rank_service->find_ranks_currentweek();
-		echo json_encode($result, JSON_NUMERIC_CHECK);
+		echo json_encode($result, get_json_encode_opt());
 	}
 
 	public function weeknumber($weeknumber) 
@@ -20,6 +20,6 @@ class Ranks extends CI_Controller {
 		$this->load->library('rank_service');
 		
 		$result = $this->rank_service->find_ranks_by_weeknumber($weeknumber);
-		echo json_encode($result, JSON_NUMERIC_CHECK);
+		echo json_encode($result, get_json_encode_opt());
 	}
 }

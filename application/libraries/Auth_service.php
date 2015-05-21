@@ -23,8 +23,11 @@ class Auth_service {
 	public function __construct()
 	{
 		$this->CI =& get_instance();
-		$this->all_path[0] = new path("/^api\/ranks/i", false, array('GET'));
-		$this->all_path[1] = new path("/^api\/ranks\/\d+/i", false, array('GET'));
+		$i=0;
+		$this->all_path[$i] = new path("/^api\/ranks/i", false, array('GET'));$i++;
+		$this->all_path[$i] = new path("/^api\/ranks\/\d+/i", false, array('GET'));$i++;
+
+		$this->all_path[$i] = new path("/^api\/teams/i", false, array('GET'));$i++;
 	}
 
 	public function authorization() 
