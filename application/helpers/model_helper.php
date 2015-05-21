@@ -1,10 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-function find_week_byweeknumber($weeks, $weekNumber) 
-{
-
-}
-
 function find_team_byteamid($teams, $team_id) {
 	foreach ($teams as $t) 
 	{

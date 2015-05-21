@@ -12,10 +12,10 @@ class Rank_service {
 		$this->CI->load->model('phase_model'); 
 		$currentWeek = $this->CI->phase_model->get_current_match();
 
-		return $this->find_ranks_by_weeknumber($currentWeek);
+		return $this->find_ranks_by_week($currentWeek);
 	}
 
-	public function find_ranks_by_weeknumber($weeknumber) {
+	public function find_ranks_by_week($weeknumber) {
 		$this->CI->load->model('rank_model');
 		$this->CI->load->model('team_model');
 		$this->CI->load->helper('model_helper');
