@@ -16,8 +16,8 @@ class Rank_service {
 	}
 
 	public function find_ranks_by_weeknumber($weeknumber) {
-		$this->CI->load->model('rank'); 
-		$this->CI->load->model('team'); 
+		$this->CI->load->model('rank');
+		$this->CI->load->model('team');
 		$this->CI->load->helper('model_helper');
 
 		$ranks = $this->CI->rank->find_ranks_by_weeknumber($weeknumber);

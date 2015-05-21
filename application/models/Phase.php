@@ -20,7 +20,6 @@ class Phase extends CI_Model
 			{
 				return $row['value'] - 1;
 			}
-			echo $row['key'] . "<br/>";
 		}
 		return null;
 	}
