@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rank extends CI_Model
+class Rank_model extends CI_Model
 {
 	public function find_ranks_by_weeknumber($weekNumber) 
 	{

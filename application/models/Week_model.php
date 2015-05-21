@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Week extends CI_Model
+class Week_model extends CI_Model
 {
 	public function get_all_week() 
 	{

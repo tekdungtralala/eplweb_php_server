@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['api/ranks/(:num)'] = 'api/ranks/weeknumber/$1';
+$route['api/matchday/(:num)'] = 'api/matchday/weeknumber/$1';

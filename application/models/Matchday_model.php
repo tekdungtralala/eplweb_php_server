@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Matchday extends CI_Model
+class Matchday_model extends CI_Model
 {
 	public function find_by_weekid($weeknumber)
 	{

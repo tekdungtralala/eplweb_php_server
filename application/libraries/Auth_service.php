@@ -12,8 +12,6 @@ class path {
 		$this->secure = $secure;
 		$this->allowed_method = $allowed_method;
 	}
-
-
 }
 
 class Auth_service {
@@ -28,6 +26,7 @@ class Auth_service {
 		$this->all_path[$i] = new path("/^api\/ranks\/\d+/i", false, array('GET'));$i++;
 
 		$this->all_path[$i] = new path("/^api\/teams/i", false, array('GET'));$i++;
+		$this->all_path[$i] = new path("/^api\/matchday\/\d+/i", false, array('GET'));$i++;
 
 		$this->all_path[$i] = new path("/^api\/page\/matchday/i", false, array('GET'));$i++;
 	}

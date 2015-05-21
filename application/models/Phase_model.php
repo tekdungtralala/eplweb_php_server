@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Phase extends CI_Model
+class Phase_model extends CI_Model
 {
 	const CURRENT_MATCHDAY = "CURRENT_MATCHDAY";
 

@@ -9,19 +9,19 @@ class Rank_service {
 	}
 
 	public function find_ranks_currentweek() {
-		$this->CI->load->model('phase'); 
-		$currentWeek = $this->CI->phase->get_current_match();
+		$this->CI->load->model('phase_model'); 
+		$currentWeek = $this->CI->phase_model->get_current_match();
 
 		return $this->find_ranks_by_weeknumber($currentWeek);
 	}
 
 	public function find_ranks_by_weeknumber($weeknumber) {
-		$this->CI->load->model('rank');
-		$this->CI->load->model('team');
+		$this->CI->load->model('rank_model');
+		$this->CI->load->model('team_model');
 		$this->CI->load->helper('model_helper');
 
-		$ranks = $this->CI->rank->find_ranks_by_weeknumber($weeknumber);
-		$teams = $this->CI->team->get_all_team();
+		$ranks = $this->CI->rank_model->find_ranks_by_weeknumber($weeknumber);
+		$teams = $this->CI->team_model->get_all_team();
 
 		foreach ($ranks as &$r)
 		{

@@ -7,10 +7,10 @@ class Teams extends CI_Controller {
 	{
 		$this->auth_service->authorization();
 
-		$this->load->model('team'); 
+		$this->load->model('team_model'); 
 		$this->load->helper('model_helper');
 
-		$teams = $this->team->get_all_team();;
+		$teams = $this->team_model->get_all_team();;
 		foreach ($teams as &$t)
 		{
 			$t = change_key($t, get_team_keys());

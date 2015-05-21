@@ -10,8 +10,8 @@ class Week_service {
 
 	public function find_by_weeknumber($weeknumber) 
 	{
-		$this->CI->load->model('week');
-		$weeks = $this->CI->week->get_all_week();
+		$this->CI->load->model('week_model');
+		$weeks = $this->CI->week_model->get_all_week();
 
 		for($i = 0; $i < count($weeks); $i++)
 		{
